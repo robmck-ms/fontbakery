@@ -88,12 +88,12 @@ class Font(Testable):
         # VF
         if self.is_variable_font:
             if self.default_wght_coord == 700.0:
-                if "Italic" in filename:
+                if "Italic" in filename or "Oblique" in filename:
                     return "BoldItalic"
                 else:
                     return "Bold"
             else:
-                if "Italic" in filename:
+                if "Italic" in filename or "Oblique" in filename:
                     return "Italic"
                 else:
                     return "Regular"
